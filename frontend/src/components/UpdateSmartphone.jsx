@@ -3,7 +3,7 @@ import SmartphoneForm from "./SmartphoneForm";
 
 function UpdateSmartphone() {
   const location = useLocation();
-  const { id, marca, modelo, memoria, lancamento } = location.state;
+  const { id, marca, modelo, memoria, lancamento, fabricante } = location.state;
 
   const updateSmartphoneRequest = async (data) => {
     const url = `${
@@ -28,6 +28,7 @@ function UpdateSmartphone() {
         modelo,
         memoria,
         lancamento: new Date(lancamento).toISOString().split("T")[0],
+        fabricante,
       }}
       submitButtonText="Alterar"
       successMessage="Celular atualizado com sucesso!"

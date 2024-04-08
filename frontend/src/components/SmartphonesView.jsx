@@ -113,6 +113,7 @@ function SmartphonesView() {
                               marca,
                               modelo,
                               memoria,
+                              fabricante,
                               lancamento,
                             }}
                             className="border-b-2 border-slate-950 hover:border-slate-800 hover:text-slate-800"
