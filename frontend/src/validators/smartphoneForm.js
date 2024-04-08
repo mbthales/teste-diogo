@@ -19,4 +19,5 @@ export const smartphoneFormSchema = z.object({
         issue.code === "invalid_date" ? "Selecione uma data" : defaultError,
     }),
   }),
+  fabricante: z.string().min(1, "Fabricante não pode ser vazio"),
 });

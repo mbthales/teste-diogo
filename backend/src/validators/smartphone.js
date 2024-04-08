@@ -5,6 +5,7 @@ const createSmartphoneSchema = zod.object({
   modelo: zod.string().trim().min(5).max(20),
   memoria: zod.number(),
   lancamento: zod.string(),
+  fabricante: zod.string(),
 });
 
 const updateSmartphoneSchema = createSmartphoneSchema.partial();

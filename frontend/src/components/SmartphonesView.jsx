@@ -83,6 +83,7 @@ function SmartphonesView() {
                     <th>Marca</th>
                     <th>Modelo</th>
                     <th>Capacidade de Memória (GB)</th>
+                    <th>Fabricante</th>
                     <th>Data de Lançamento</th>
                     <th>Alterar</th>
                     <th>Excluir</th>
@@ -90,11 +91,19 @@ function SmartphonesView() {
                 </thead>
                 <tbody>
                   {smartphones.map(
-                    ({ id, marca, modelo, memoria, lancamento }) => (
+                    ({
+                      id,
+                      marca,
+                      modelo,
+                      memoria,
+                      lancamento,
+                      fabricante,
+                    }) => (
                       <tr key={id}>
                         <td>{marca}</td>
                         <td>{modelo}</td>
                         <td>{memoria}</td>
+                        <td>{fabricante}</td>
                         <td>{formattedDate(lancamento)}</td>
                         <td>
                           <Link

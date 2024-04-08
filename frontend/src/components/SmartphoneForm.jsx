@@ -74,6 +74,13 @@ const SmartphoneForm = ({
             </span>
           </label>
           <label>
+            Fabricante
+            <select {...register("fabricante", { required: true })}>
+              <option value="Apple">Apple</option>
+              <option value="Samsung">Samsung</option>
+            </select>
+          </label>
+          <label>
             Data de Lançamento
             <input
               type="date"

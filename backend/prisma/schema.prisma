@@ -18,6 +18,7 @@ model Smartphone {
   marca      String
   modelo     String
   memoria    Int
+  fabricante String
   lancamento DateTime
   createdAt  DateTime @default(now())
   updatedAt  DateTime @updatedAt
