@@ -2,6 +2,8 @@ const express = require("express");
 const cors = require("cors");
 require("dotenv").config();
 
+const routes = require("./routes");
+
 const app = express();
 
 const port = process.env.PORT || 3000;
@@ -13,17 +15,7 @@ app.use(
   })
 );
 
-const {
-  getSmartphonesController,
-  createSmartphoneController,
-  updateSmartphoneController,
-  deleteSmartphoneController,
-} = require("./controllers/smartphone");
-
-getSmartphonesController(app);
-createSmartphoneController(app);
-updateSmartphoneController(app);
-deleteSmartphoneController(app);
+routes(app);
 
 app.listen(port, () => {
   console.log(`Server listening on port ${port}`);

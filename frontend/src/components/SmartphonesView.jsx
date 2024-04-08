@@ -16,7 +16,7 @@ function SmartphonesView() {
 
   const fetchSmartphones = async () => {
     const url = `${
-      import.meta.env.API_URL || "http://localhost:3000"
+      import.meta.env.VITE_API_URL || "http://localhost:3000"
     }/smartphones`;
 
     const response = await fetch(url);
@@ -45,7 +45,7 @@ function SmartphonesView() {
 
   const deleteSmartphone = async () => {
     const url = `${
-      import.meta.env.API_URL || "http://localhost:3000"
+      import.meta.env.VITE_API_URL || "http://localhost:3000"
     }/smartphone/${smartphoneId}`;
 
     await fetch(url, {

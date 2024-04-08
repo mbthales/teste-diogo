@@ -7,7 +7,7 @@ function UpdateSmartphone() {
 
   const updateSmartphoneRequest = async (data) => {
     const url = `${
-      import.meta.env.API_URL || "http://localhost:3000"
+      import.meta.env.VITE_API_URL || "http://localhost:3000"
     }/smartphone/${id}`;
 
     const response = await fetch(url, {

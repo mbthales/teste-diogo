@@ -3,7 +3,7 @@ import SmartphoneForm from "./SmartphoneForm";
 function AddSmartphoneView() {
   const createSmartphoneRequest = async (data) => {
     const url = `${
-      import.meta.env.API_URL || "http://localhost:3000"
+      import.meta.env.VITE_API_URL || "http://localhost:3000"
     }/smartphone`;
     const response = await fetch(url, {
       method: "POST",
